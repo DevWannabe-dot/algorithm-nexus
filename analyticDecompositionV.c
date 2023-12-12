@@ -3,12 +3,10 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#include "headers/errors.h"
 
 /* Constantes */
     // Códigos de erro
-#define SUCESSO             (0)
-#define ARG_ERR_OFFSET      (0)
-#define NOT_ENOUGH_ARGS     (ARG_ERR_OFFSET + 1)
 #define WRONG_MODE          (ARG_ERR_OFFSET + 2)
     // Valores
 #define TOTAL_ARGS          (4) // programName + mode + let1 + let2
