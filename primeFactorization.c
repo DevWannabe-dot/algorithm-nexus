@@ -1,18 +1,25 @@
-/* Inclusões */
+/**
+ * @file    primeFactorDecomposition.c
+ * @brief   Outputs what prime numbers multiply together to make the argv[1] number.
+ * @author  Pedro Henrique Pinto de Oliveira
+ * @date    2023-12-12
+*/
+
+/* Inclusions */
+#include "headers/errors.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include <math.h>
-#include "headers/errors.h"
 
-/* Constantes */
+/* Constants */
 #define TRUE    (1 == 1)
 #define FALSE   (!TRUE)
 
-/* Tipos */
+/* Types */
 typedef uint8_t bool_t;
 
-/* Funções */
+/* Functions */
 bool_t ehPrimo(unsigned long n) {
     int iterator = n;
     
@@ -40,7 +47,7 @@ void DecomposePrimeFactors(unsigned long n) {
 int main(int argc, char ** argv) {
     unsigned long num;
 
-    if(argc != 2) return NOT_ENOUGH_ARGS;
+    if(argc != NO_ARGS_PROVIDED + 1) return NOT_ENOUGH_ARGS;
     
     num = strtoul(argv[1], NULL, 0);
 

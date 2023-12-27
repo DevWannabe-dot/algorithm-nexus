@@ -1,14 +1,21 @@
-/* Inclusões */
+/**
+ * @file    analyticDecompositionV.c
+ * @brief   Code that allows composing ("compose", x_coordinate, y_coordinate) and decomposing ("decompose", xy_resultant, angle) a vector
+ * @author  Pedro Henrique Pinto de Oliveira
+ * @date    2023-12-03
+*/
+
+/* Inclusions */
+#include "headers/errors.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-#include "headers/errors.h"
 
-/* Constantes */
-    // Códigos de erro
-#define WRONG_MODE          (ARG_ERR_OFFSET + 2)
-    // Valores
+/* Constants */
+    // Program-specific error codes
+#define WRONG_MODE          (ARG_ERR_OFFSET)
+    // Values
 #define TOTAL_ARGS          (4) // programName + mode + let1 + let2
 #define PI                  (3.1415926535)
 #define LINHAS              (2)
@@ -16,11 +23,11 @@
     // Macros
 #define DEF_ANGLE_RAD(dg)   (dg * PI / 180)
 
-/* Tipos */
+/* Types */
 
-/* Funções */
+/* Functions */
 int main(int argc, char ** argv){
-    if(argc != 4) return ARG_ERR_OFFSET;
+    if(argc != NO_ARGS_PROVIDED + 3) return ARG_ERR_OFFSET;
 	
     double angle_degrees, angle_rad, v, compX, compY;
 

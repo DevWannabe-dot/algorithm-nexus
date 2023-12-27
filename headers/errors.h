@@ -3,9 +3,10 @@
 #ifndef __ERRORS_h__
 #define __ERRORS_h__
 
-/* Constantes */
+/* Constants */
 #define SUCESSO             (0)
 #define ARG_ERR_OFFSET      (0)
-#define NOT_ENOUGH_ARGS     (ARG_ERR_OFFSET + 1)
+#define NO_ARGS_PROVIDED    (ARG_ERR_OFFSET + 1)
+#define NOT_ENOUGH_ARGS     (ARG_ERR_OFFSET + 2)
 
 #endif

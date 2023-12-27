@@ -11,13 +11,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-/* Constantes */
+/* Constants */
 #define N_NUMEROS_SORTEADOS     (6)
 #define N_NUMEROS_POSSIVEIS     (60)
 
-/* Tipos */
+/* Types */
 
-/* Funções */
+/* Functions */
 int main(int argc, char ** argv) {
     srand(time(NULL));
 
