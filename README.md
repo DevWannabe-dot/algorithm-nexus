@@ -10,3 +10,6 @@ Multiple programs I've wrote on top of my study journey, be it physics, maths or
 #### primeFactorDecomposition.c
 `$ gcc primeFactorDecomposition.c`<br>
 `$ a 770`<br>
+#### generateMegaSena.c
+`$ gcc generateMegaSena.c`<br>
+`$ a 6 60`<br>
