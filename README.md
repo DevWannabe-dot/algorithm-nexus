@@ -14,5 +14,5 @@ Multiple programs I've wrote on top of my study journey, be it physics, maths or
 `$ gcc generateMegaSena.c`<br>
 `$ a 6 60`<br>
 #### xor_swap.c
-`$ gcc xor_swap.c`<br>
+`$ gcc xor_swap.c -lm`<br>
 `$ a 8 80`<br>
