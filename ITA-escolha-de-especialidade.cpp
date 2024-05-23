@@ -1,14 +1,20 @@
-/* Inclusões */
+/**
+ * @file    ITA-escolha-de-especialidade.cpp
+ * @brief   Receives three grades via argv[1], argv[2] and argv[3], outputs general classification to stdout and a database file(.bin).
+ * @author  Pedro Henrique Pinto de Oliveira
+ * @date    2024-05-18
+*/
+
+/* Inclusions */
 #include "headers/errors.h"
 #include <iostream>
 using namespace std;
 
-/* Constantes */
-#define SUCESSO     (0)
+/* Constants */
 
-/* Tipos */
+/* Types */
 
-/* Funções */
+/* Functions */
 int main(int argc, char ** argv)
 {
     try
@@ -25,5 +31,5 @@ int main(int argc, char ** argv)
     
     cout << argv[0] << '\n';
 
-    return SUCESSO;
+    return SUCCESS;
 }

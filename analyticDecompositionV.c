@@ -54,5 +54,5 @@ int main(int argc, char ** argv){
         return WRONG_MODE;
     }
     
-    return SUCESSO;
+    return SUCCESS;
 }

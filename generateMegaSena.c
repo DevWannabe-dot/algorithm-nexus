@@ -38,5 +38,5 @@ int main(int argc, char ** argv) {
                 { printf(" "); }
         }
     }
-    return SUCESSO;
+    return SUCCESS;
 }

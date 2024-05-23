@@ -4,7 +4,7 @@
 #define __ERRORS_h__
 
 /* Constants */
-#define SUCESSO             (0)
+#define SUCCESS             (0)
 #define ARG_ERR_OFFSET      (0)
 #define NO_ARGS_PROVIDED    (ARG_ERR_OFFSET + 1)
 #define NOT_ENOUGH_ARGS     (ARG_ERR_OFFSET + 2)

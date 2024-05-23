@@ -53,5 +53,5 @@ int main(int argc, char ** argv) {
 
     DecomposePrimeFactors(num);
 
-    return SUCESSO;
+    return SUCCESS;
 }

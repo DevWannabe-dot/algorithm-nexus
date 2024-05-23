@@ -69,5 +69,5 @@ int main(int argc, char ** argv)
     printf("x = %d\n"
             "y = %d\n", x, y);
 
-    return SUCESSO;
+    return SUCCESS;
 }
