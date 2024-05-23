@@ -16,3 +16,6 @@ Multiple programs I've wrote on top of my study journey, be it physics, maths or
 #### xor_swap.c
 `$ gcc xor_swap.c -lm`<br>
 `$ a 8 80`<br>
+#### bit_shift
+`$ gcc bit_shift.c`<br>
+`$ ./a.out`
