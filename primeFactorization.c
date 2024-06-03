@@ -43,6 +43,7 @@ void DecomposePrimeFactors(unsigned long n) {
             } while (ehPrimo(primo) == FALSE);
         }
     }
+    puts("");
 }
 int main(int argc, char ** argv) {
     unsigned long num;

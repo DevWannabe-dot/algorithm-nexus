@@ -39,6 +39,7 @@ int main(int argc, char ** argv){
 
         printf("For 2 vectors a = %lf and b = %lf, the resulting vector is:\n"
                 "\tc = %lf, %.1lf degrees counterclockwise from the horizontal axis.", compX, compY, v, angle_degrees);
+        puts("");
     } else if (strcmp(argv[1], "decompose") == 0) {
         v = strtod(argv[2], NULL); angle_degrees = strtod(argv[3], NULL);
 
@@ -50,6 +51,7 @@ int main(int argc, char ** argv){
         printf("For a vector of module %lf with %.1lf degrees counterclockwise from the horizontal axis:\n"
                 "\tOx = %lf"
                 "\tOy = %lf", v, angle_degrees, compX, compY);
+        puts("");
     } else {
         return WRONG_MODE;
     }
