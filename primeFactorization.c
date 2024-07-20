@@ -20,7 +20,7 @@
 typedef uint8_t bool_t;
 
 /* Functions */
-bool_t ehPrimo(unsigned long n) {
+bool_t isPrime(unsigned long n) {
     int iterator = n;
     
     if(n != 1 && n != 2) {
@@ -29,18 +29,18 @@ bool_t ehPrimo(unsigned long n) {
     return TRUE;
 }
 void DecomposePrimeFactors(unsigned long n) {
-    unsigned long primo = 2;
+    unsigned long prime = 2;
 
     printf("%lu", n);
 
     while(n != 1) {
-        if(n % primo == 0) {
-            n /= primo;
-            printf(" : %lu = %lu", primo, n);
+        if(n % prime == 0) {
+            n /= prime;
+            printf(" : %lu = %lu", prime, n);
         } else {
             do {
-                primo++;
-            } while (ehPrimo(primo) == FALSE);
+                prime++;
+            } while (isPrime(prime) == FALSE);
         }
     }
     puts("");
