@@ -17,6 +17,8 @@ public static final int CHAR_INT_OFFSET = 48;
 
 int [][]m = new int[MAX_N+BORDER][MAX_N+BORDER];
 int [][]m1 = new int[MAX_N+BORDER][MAX_N+BORDER];
+int Q;
+int N;
 
 /* Functions */
 /**
@@ -35,8 +37,7 @@ void settings()
 void setup()
 {
   fill(255);
-  frameRate(1);
-  noLoop();
+  frameRate(30);
   
   main();
 }
@@ -44,7 +45,7 @@ void setup()
 * (user) Draws a N*N matrix
 * @param N Dimensions of the cell
 */
-void drawSquareMatrix(int N)
+void drawSquareMatrix()
 {
   int w = WINDOW_W/N;
   int h = WINDOW_H/N;
@@ -53,7 +54,7 @@ void drawSquareMatrix(int N)
     for(int j = 1; j < N+1; j++){
       fill(255 - (m[i][j]*255));
       stroke(84);
-      rect((j-1)*w, (i-1)*h, w, h);
+      rect((j-1)*w, (i-1)*h, w, h); //<>//
     }
   }
 }
@@ -61,7 +62,7 @@ void drawSquareMatrix(int N)
 * (user) Updates the cell to the next state
 * @param N Dimensions of the cell
 */
-void nextCellState(int N)
+void nextCellState()
 {
   for(int i = 1; i < N; i++){
     for(int j = 1; j < N+1; j++){
@@ -77,6 +78,7 @@ void nextCellState(int N)
   for(int i = 1; i < N+1; i++){
     System.arraycopy(m1[i], 0, m[i], 0, N+1);
   }
+  drawSquareMatrix();
 }
 /**
 * (user) Runs the algorithm routines and coordinates function calls.
@@ -87,8 +89,8 @@ int main()
   int nRowsCols, nSteps;
   String[] input = loadStrings("examples/game.txt");
   
-  nRowsCols = (int)(input[0].charAt(0) - CHAR_INT_OFFSET);
-  nSteps = (int)(input[0].charAt(2) - CHAR_INT_OFFSET);
+  nRowsCols = (int)(input[0].charAt(0) - CHAR_INT_OFFSET); N = nRowsCols;
+  nSteps = (int)(input[0].charAt(2) - CHAR_INT_OFFSET); Q = nSteps;
   
   // Receive initial state
   for(int i = 0; i < nRowsCols; i++){
@@ -101,20 +103,18 @@ int main()
   for(int i = 1; i < nRowsCols+1; i++){
     System.arraycopy(m[i], 0, m1[i], 0, nRowsCols+1);
   }
-  drawSquareMatrix(nRowsCols);
+  drawSquareMatrix();
   
-  // Process Qth state
-  for(int i = 0; i < nSteps; i++){
-    nextCellState(nRowsCols);
-    drawSquareMatrix(nRowsCols);
-  }
   return SUCCESS;
 }
-
+/**
+* (system) continuously executes the instructions within, but is user-controlled via keyboard.
+*/
 void draw()
 {
-  
-  // Keyboard interaction (rewind, fast forward)
-  // makes use of Processing's matrix stack
-  // redraw();
+  if(keyPressed){
+    nextCellState();
+    delay(100);
+    // default frame delay of 33.3ms too small, thus provoking multiple updates on a not fast enough key press + release
+  }
 }
