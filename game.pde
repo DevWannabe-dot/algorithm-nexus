@@ -88,9 +88,11 @@ int main()
   // Parse input from file
   int nRowsCols, nSteps;
   String[] input = loadStrings("examples/game.txt");
+  String tmp = String.valueOf(input[0]);
+  String[] tokens = tmp.split(" ");
   
-  nRowsCols = (int)(input[0].charAt(0) - CHAR_INT_OFFSET); N = nRowsCols;
-  nSteps = (int)(input[0].charAt(2) - CHAR_INT_OFFSET); Q = nSteps;
+  nRowsCols = Integer.valueOf(tokens[0]); N = nRowsCols;
+  nSteps = Integer.valueOf(tokens[1]); Q = nSteps;
   
   // Receive initial state
   for(int i = 0; i < nRowsCols; i++){
