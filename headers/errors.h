@@ -1,3 +1,10 @@
+/**
+ * @file    errors.h
+ * @brief   Auxiliary header with status codes
+ * @author  Pedro Henrique Pinto de Oliveira
+ * @date    2023-12-12
+ */
+
 #pragma once
 
 #ifndef __ERRORS_h__

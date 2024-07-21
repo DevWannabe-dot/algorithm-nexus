@@ -1,5 +1,5 @@
 /**
- * @file    squaredDigitSum.cpp
+ * @file    squareDigitSum.cpp
  * @brief   Receives initial term via argv[1] and iterates until desired term argv[2], mathematically optimized.
  * @author  Pedro Henrique Pinto de Oliveira
  * @date    2024-05-18
@@ -16,7 +16,7 @@ using namespace std;
 /* Types */
 
 /* Functions */
-void findNthTerm(int init, int target)
+void squareDigitSum(int init, int target)
 {
     for(int i = init; i < target; i++)
     {
