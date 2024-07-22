@@ -10,6 +10,7 @@ public static final int SUCCESS = 0;
 public static int WINDOW_W;
 public static int WINDOW_H;
 public static final int MAX_N = 50;
+public static final int MAX_Q = 100;
 public static final int ALIVE = 1;
 public static final int DEAD = 0;
 public static final int BORDER = 2;
@@ -17,7 +18,7 @@ public static final int CHAR_INT_OFFSET = 48;
 
 int [][]m = new int[MAX_N+BORDER][MAX_N+BORDER];
 int [][]m1 = new int[MAX_N+BORDER][MAX_N+BORDER];
-int Q;
+int Q = 0;
 int N;
 
 /* Functions */
@@ -92,7 +93,9 @@ int main()
   String[] tokens = tmp.split(" ");
   
   nRowsCols = Integer.valueOf(tokens[0]); N = nRowsCols;
-  nSteps = Integer.valueOf(tokens[1]); Q = nSteps;
+  if(tokens.length > 1){
+    nSteps = Integer.valueOf(tokens[1]); Q = nSteps;
+  }
   
   // Receive initial state
   for(int i = 0; i < nRowsCols; i++){
@@ -114,6 +117,14 @@ int main()
 */
 void draw()
 {
+  while(Q > 0)
+  {
+    print(Q + "\n");
+    Q--;
+    delay(1000);
+    nextCellState();
+  }
+  
   if(keyPressed){
     nextCellState();
     delay(100);
