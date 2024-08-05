@@ -29,11 +29,12 @@ extern "C" {
 #endif
 
 /* Functions */
+void xorSwap(long * a, long * b);
 int_bin * evaluate_Base10ToBase2(int Base10_N, int_bin * Base2_N);
 void print_Base10ToBase2(int Base10_N);
-void xorSwap(long * a, long * b);
 
 #ifdef __cplusplus
 }
 #endif
+
 #endif // __XOR_SWAP_h__

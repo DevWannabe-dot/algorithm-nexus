@@ -19,14 +19,9 @@ using namespace std;
 /* Functions */
 int euclidAlgo(long a, long b)
 {
-    int i = 1;
+    if(b == 0) return a;
 
-    while(b*(i+1) < a){
-        i++;
-    }
-    if(b*i == a) return b; // If there is no remainder, b must be (a, b).
-
-    return euclidAlgo(b, a-(b*i));
+    return euclidAlgo(b, a % b);
 }
 long euclidCalcGDC(long a, long b)
 {
