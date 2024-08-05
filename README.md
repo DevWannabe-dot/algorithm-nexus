@@ -1,6 +1,6 @@
 <!-- Index -->
 # algorithm-nexus
-Multiple algorithms I've wrote on top of my study routine, in order to help demonstrate or even solve different branches of general problems, using computer science.
+Multiple algorithms I've wrote on top of my study routine, in order to solve or help demonstrate different branches of general problems, using computer science.
 
 <!-- Preview -->
 <p align="center">
