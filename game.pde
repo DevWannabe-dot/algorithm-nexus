@@ -1,5 +1,5 @@
 /**
-* @file    jogo.pde
+* @file    game.pde
 * @brief   Resolution of the Conway's Game of Life problem @ OBI 2024 (P2)
 * @author  Pedro Henrique Pinto de Oliveira
 * @date    2024-06-29
