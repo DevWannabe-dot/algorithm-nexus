@@ -9,7 +9,7 @@ Multiple algorithms I've wrote on top of my study routine, in order to solve or 
 
 <!-- Usage -->
 # Usage
-Reading the internal source code documentation is advised.
+Reading /docs code is advised.
 #### analyticDecompositionV.c
 `$ gcc analyticDecompositionV.c -lm -oanalyticDecompositionV`<br>
 `$ ./analyticDecompositionV compose 30 40`<br>
