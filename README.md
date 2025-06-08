@@ -14,8 +14,8 @@ Reading /docs code is advised.
 `$ gcc analyticDecompositionV.c -lm -oanalyticDecompositionV`<br>
 `$ ./analyticDecompositionV compose 30 40`<br>
 `$ ./analyticDecompositionV decompose 130 67.5`<br>
-#### primeFactorDecomposition.c
-`$ gcc primeFactorDecomposition.c -lm -oprimeFactorDecomposition`<br>
+#### primeFactorization.c
+`$ gcc primeFactorization.c -lm -oprimeFactorization`<br>
 `$ ./primeFactorDecomposition 770`<br>
 #### generateMegaSena.c
 `$ gcc generateMegaSena.c -ogenerateMegaSena`<br>
